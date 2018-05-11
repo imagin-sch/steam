@@ -1,0 +1,264 @@
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Theme Template for Bootstrap</title>
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<style type="text/css">
+	.game{
+		position: relative;/*主体*/
+		z-index: 0;
+
+	}
+	.game:hover{				/*主体的底部黑线*/
+		z-index: 50;
+	}
+	.game span{			/*客体背景*/
+		position:absolute;
+		background-color:#eeeeee;
+		padding: 2px;
+		border: 0px dashed gray;
+		visibility: hidden;
+		color: black;
+		text-decoration: none;
+	}
+	.game:hover img{
+		border:2px #ffd700 solid;
+	}
+	.game span img{			/*客体背景里的图片*/
+		border-width: 0;
+		border:0px #ffffff solid;
+		padding: 10px;
+	}
+	.game:hover span{		/*客体位置*/
+		visibility: visible;
+		border:0px #ffffff solid;
+		top: -150px;
+		left: 300px; 
+	}
+</style>
+<style type="text/css">
+p{
+	text-indent: 2em;
+}
+
+#aa{
+	display:block;
+	position:relative;
+	margin:auto;
+	width:1280px;
+	height:720px;
+}
+</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">             
+				<a class="navbar-brand" href="#">Steam</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">																					<!--锚还没有设计！！！！！连接好数据库后直接可以改成select语句-->
+					
+					<li class="active dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#q">Action</a></li>
+							<li><a href="#">Racing</a></li>
+							<li><a href="#">Massively Multiplayer</a></li>											<!--暂时先这些分类-->
+							<li><a href="#">Sport</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Free To Play</a></li>
+						</ul>
+					</li>
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Softwares<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Software Hub</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Design</a></li>
+							<li><a href="#">Education</a></li>											
+							<li><a href="#">Game Development</a></li>
+							<li><a href="#">Video Production</a></li>
+						</ul>
+					</li>				
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Videos <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Economic</a></li>
+							<li><a href="#">Movies</a></li>
+							<li><a href="#">Music</a></li>
+							<li role="separator" class="divider"></li>
+							<li class="dropdown-header">Amusement</li>
+							<li><a href="#">Gaming</a></li>
+							<li><a href="#">Funny Collection</a></li>
+						</ul>
+					</li>
+					<li><a href="#"></a></li>	
+					<li><a href="#"></a></li>					<!--在下才学疏浅 强行把me标签挂到了最后面。。。 后面有机会一定改-->
+					<li><a href="#"></a></li>				  
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>				  
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>				  
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>				  
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>				  
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>				  
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#">Me</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="page-header">
+	</br></br>
+	<h1><p>Today's Highlighted Deals</p></h1>
+	<form class="form-in">
+		<div align="right" style="margin-right:200">
+			<input style="width:300px"  type="text" id="inputSearch" class=" form-control"  placeholder="Search what you want" required>
+		</div>
+	</div>
+	
+	
+	
+	<div id="carousel-example-generic" class="carousel slide">
+		<ol class="carousel-indicators" >
+			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<img src="http://localhost:801/img/wow.jpg" alt="First slide" id="aa">
+			</div>
+			<div class="item">
+				<img src="http://localhost:801/img/civ6.jpg" alt="Second slide" id="aa">
+			</div>
+			<div class="item">
+				<img src="http://localhost:801/img/hos.jpg" alt="Third slide" id="aa">
+			</div>
+		</div>
+		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+</div> 
+<div class="page-header">
+</br></br>
+<h2><p>Your Discovery Queue</p></h2>
+</br></br>
+<h3><p>Your Steam Discovery Queue is a mix of products that are new, 
+top-selling, and similar to what you play and use on Steam. </p></h3>
+<h3><p>Click below to get started, 
+	and use the controls on each product page to easily follow, add to wishlist, or mark as 
+not interested and to jump to the next title in your queue.</p></h3>
+</div>
+
+
+<div style="margin-left:311px;position:absolute;height:240px;width:1280px;background-color:black" >					<!--推荐栏-->
+	<div style ="position:relative;float:left;"class="game">
+		<img src="http://localhost:801/img/hos.jpg" width="320" height="240" />
+		<span>test<img src="http://localhost:801/img/hos.jpg" width="302" height="300" />333</span></div>
+		
+		<div style ="position:relative;float:left;height:239;width:319;margin-left:1px"class="game">
+			<img src="http://localhost:801/img/hos.jpg" height="239" width="319" />
+			<span>test<img src="http://localhost:801/img/hos.jpg" width="302" height="300" />122</span></div>
+			
+			<div style ="position:relative;float:left;height:240;width:319;margin-left:1px;margin-top:1px"class="game">
+				<img src="http://localhost:801/img/hos.jpg" height="240" width="319"/>
+				<span>test<img src="http://localhost:801/img/hos.jpg" width="302" height="300" />122</span></div>
+				
+				<div style ="position:relative;float:left;height:240;width:319;margin-left:1px;margin-top:1px"class="game">
+					<img src="http://localhost:801/img/hos.jpg" height="240" width="319"/>
+					<span>test<img src="http://localhost:801/img/hos.jpg" width="302" height="300" />122</span></div>
+				</div>
+				
+				<br><br><br><br><br><br><br><br><br>
+				<div class="page-header">
+				</br></br>
+				<h2><p>About More</p></h2>
+			</div>
+			
+			<br><br><br><br><br><br>
+			<div style="margin-left:311px;position:absolute;height:240px;width:1280px;background-color:black" >					<!--三小-->
+				<div style ="position:relative;float:right;"class="game">
+					<img src="http://localhost:801/img/hos.jpg" width="425" height="240" />
+					<span>test<img src="http://localhost:801/img/hos.jpg" width="302" height="300" />333</span></div>
+					
+					<div style ="position:relative;float:left;height:239;width:425;margin-left:1px"class="game">
+						<img src="http://localhost:801/img/hos.jpg" height="239" width="425" />
+						<span>test<img src="http://localhost:801/img/hos.jpg" width="302" height="300" />122</span></div>
+						
+						<div style ="position:relative;float:left;height:240;width:425;margin-left:1px;margin-top:1px"class="game">
+							<img src="http://localhost:801/img/hos.jpg" height="240" width="425"/>
+							<span>test<img src="http://localhost:801/img/hos.jpg" width="302" height="300" />122</span></div>
+						</div>
+						
+
+						<br><br><br><br><br><br><br><br><br><br><br><br>
+
+						
+						<div style="margin-left:311px;position:absolute;height:480px;width:1280px;background-color:black" >					<!--右大左小-->
+							<div style ="position:relative;float:right;"class="game">
+								<img src="http://localhost:801/img/hos.jpg" width="852" height="480" />
+								<span>test<img src="http://localhost:801/img/hos.jpg" width="302" height="300" />333</span></div>
+								
+								<div style ="position:relative;float:left;height:239;width:425;margin-left:1px"class="game">
+									<img src="http://localhost:801/img/hos.jpg" height="239" width="425" />
+									<span>test<img src="http://localhost:801/img/hos.jpg" width="302" height="300" />122</span></div>
+									
+									<div style ="position:relative;float:left;height:240;width:425;margin-left:1px;margin-top:1px"class="game">
+										<img src="http://localhost:801/img/hos.jpg" height="240" width="425"/>
+										<span>test<img src="http://localhost:801/img/hos.jpg" width="302" height="300" />122</span></div>
+									</div>
+
+									
+									<br><br><br><br><br><br><br><br><br><br><br><br>	<br><br><br><br><br><br><br><br><br><br><br><br>
+									
+									<div style="margin-left:311px;position:absolute;height:480px;width:1280px;background-color:black" >					<!--左大右小-->
+										<div style ="position:relative;float:left;"class="game">
+											<img src="http://localhost:801/img/hos.jpg" width="852" height="480" />
+											<span>test<img src="http://localhost:801/img/hos.jpg" width="302" height="300" />122</span></div>
+											
+											<div style ="position:relative;float:left;height:239;width:425;margin-left:1px"class="game">
+												<img src="http://localhost:801/img/hos.jpg" height="239" width="425" />
+												<span>test<img src="http://localhost:801/img/hos.jpg" width="302" height="300" />122</span></div>
+												
+												<div style ="position:relative;float:left;height:240;width:425;margin-left:1px;margin-top:1px"class="game">
+													<img src="http://localhost:801/img/hos.jpg" height="240" width="425"/>
+													<span>test<img src="http://localhost:801/img/hos.jpg" width="302" height="300" />122</span></div>
+												</div>
+												
+												<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+												<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+												<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+												
+
+												
+												<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+												<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+											</body>
+											</html>
